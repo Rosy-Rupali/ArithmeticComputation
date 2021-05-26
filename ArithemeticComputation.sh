@@ -29,3 +29,6 @@ do
 done
 
 echo "Array of dictionary values are: "${arr[@]}
+
+arr1=($(echo ${arr[@]} | tr " " "\n" | sort -nr))
+echo "Values in Descending order: "${arr1[@]}
