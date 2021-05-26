@@ -21,3 +21,11 @@ arithmeticOperation[result1]=$result1
 arithmeticOperation[result2]=$result2
 arithmeticOperation[result3]=$result3
 arithmeticOperation[result4]=$result4
+
+
+for((i=0; i<${#arithmeticOperation[@]}; i++))
+do
+	arr[i]=${arithmeticOperation[result$((i+1))]}
+done
+
+echo "Array of dictionary values are: "${arr[@]}
